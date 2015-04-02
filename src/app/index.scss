@@ -1,15 +1,42 @@
+@mixin font {
+    font-family: 'Press Start 2P', cursive;
+}
+
+@mixin font2 {
+    font-family: 'Montserrat', serif;
+}
+
+$main: #3F71A6;
+$icon: #804915;
 body {
     background: url('../assets/images/tech.jpg') no-repeat center center fixed;
-    background-size: cover;    background-size: cover;
+    background-size: cover;
+    background-size: cover;
 }
 
 .login {
-    background-color: slategray;
     opacity: .8;
     border-radius: 10px;
-    height: 70%;
-    width: 70%;
-    margin: 40%;
+    h2 {
+        @include font;
+        font-size: 1.4em;
+        color: $main;
+    }
+}
+
+#head-code {
+    color: $main;
+    @include font;
+    opacity: .8;
+}
+
+#bottom-cup {
+    font-size: 1em;
+    @include font2;
+}
+
+.github {
+    padding: 42%;
 }
 
 // injector
