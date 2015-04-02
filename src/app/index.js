@@ -3,10 +3,11 @@
 angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router', 'ui.bootstrap'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
+      .state('login', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'app/login/login.html',
+        controller: 'LoginController',
+        controllerAs: 'vm',
       });
 
     $urlRouterProvider.otherwise('/');
