@@ -111,4 +111,15 @@ angular.module('coCode')
         });
 
     };
+
+    $scope.open = function (size) {
+
+        var modalInstance = $modal.open({
+            templateUrl: '/app/modals/austins.modal.html',
+            controller: 'AustinsModalController',
+            size: size,
+
+        });
+
+    };
 });
