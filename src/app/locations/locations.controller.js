@@ -22,7 +22,20 @@ angular.module('coCode')
         }
     ];
 
-
+    $scope.slides2 = [
+        {
+            image: 'http://amplifiedculture.com/wp-content/uploads/2011/02/Austins_Coffee-1-e1301102123170.jpg'
+        },
+        {
+            image: 'http://amplifiedculture.com/wp-content/uploads/2011/02/Austins_Coffee-6-e1301101795213.jpg'
+        },
+        {
+            image: 'http://rivista-cdn.orlandomagazine.com/Orlando-Magazine/April-2014/A-Way-With-Words/Open-Words-099.jpg?ver=1395082914'
+        },
+        {
+            image: 'http://writingandrhetoric.cah.ucf.edu/imprint/wp-content/uploads/2014/11/AustinsCoffee.jpg'
+        }
+    ];
 
     vm.obj = $firebaseArray(userInfo);
     vm.logOut = Auth.logout;
