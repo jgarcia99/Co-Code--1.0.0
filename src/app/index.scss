@@ -55,15 +55,7 @@ body {
     opacity: .8;
     color: $main;
     border-radius: 5px;
-    .navbar-text {
-        color: $main;
-        font-size: 1.5em;
-        padding: 1em;
-        @include font;
-    }
-    img {
-        color: $main;
-    }
+    font-size: 1em;
 }
 
 .shops1,
@@ -73,6 +65,7 @@ body {
 .shops5 {
     @include shops;
     background-color: #758AA8;
+    margin: 3em;
 }
 
 #locations-title {
@@ -82,12 +75,11 @@ body {
     background-color: #758AA8;
 }
 
-.outer-color {
-    background-color: #142F54;
-    border-radius: 10px;
+#navcode {
+    @include font;
+    padding-left: 3em;
+    padding-top: 2em;
 }
-
-.shops1 {}
 
 // injector
 // endinjector
