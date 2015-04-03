@@ -84,5 +84,25 @@ body {
     padding-top: 2em;
 }
 
+.modal-header {
+    background-color: $main;
+    @include font;
+}
+
+.modal-body {
+    p {
+        @include font2;
+    }
+}
+
+.modal-span {
+    padding-left: 3.7em;
+    color: $main;
+}
+
+.modal-span2 {
+    color: $main;
+}
+
 // injector
 // endinjector
