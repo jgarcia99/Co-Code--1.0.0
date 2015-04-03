@@ -8,7 +8,14 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
                 templateUrl: 'app/login/login.html',
                 controller: 'LoginController',
                 controllerAs: 'vm',
-            });
+            })
+
+        .state('locations', {
+            url: '/locations',
+            templateUrl: 'app/locations/locations.html',
+            controller: 'LocationsController',
+            controllerAs: 'vm',
+        });
 
         $urlRouterProvider.otherwise('/');
     })

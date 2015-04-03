@@ -39,5 +39,33 @@ body {
     padding: 42%;
 }
 
+.navbar {
+    background-color: #eee;
+    opacity: .8;
+    color: $main;
+    .navbar-text {
+        color: $main;
+        font-size: 1.5em;
+        padding: 1em;
+        @include font;
+    }
+    img {
+        color: $main;
+    }
+}
+
+.shops {
+    background-color: #eee;
+    opacity: .9;
+    h2 {
+        @include font;
+        color: $main;
+    }
+    figcaption {
+        @include font2;
+        color: $main;
+    }
+}
+
 // injector
 // endinjector
