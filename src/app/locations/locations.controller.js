@@ -2,14 +2,14 @@
 
 angular.module('coCode')
 
-.controller('LocationsController', function ($state, $firebaseObject, $scope, $firebaseArray, $stateParams, Auth) {
+.controller('LocationsController', function ($state, $firebaseObject, $firebaseArray, $stateParams, Auth, $modal, $scope, $log) {
     var vm = this;
     var userInfo = new Firebase('https://co-code.firebaseio.com/users');
 
 
     $scope.slides = [
         {
-            image: 'http://a4.urbancdn.com/w/s/Qo/4FVmu6amvhEjZF-640m.jpg'
+            image: 'http://i886.photobucket.com/albums/ac66/tastychomps/stardust/STARDUST_ORLANDO.jpg'
         },
         {
             image: 'http://static1.squarespace.com/static/53050553e4b07e4708f6858c/t/5318b4dfe4b0fa5080a9f8aa/1394128095934/4613916-Stardust_Coffee_and_Video_Orlando.jpg'
@@ -82,24 +82,33 @@ angular.module('coCode')
         }
     ];
 
-    vm.obj = $firebaseArray(userInfo);
-    vm.logOut = Auth.logout;
+    $scope.open = function (size) {
 
-    vm.userArray = {};
+        var modalInstance = $modal.open({
+            templateUrl: '/app/modals/stardust.modal.html',
+            controller: 'StardustModalController',
+            size: size,
 
+        });
 
+        vm.obj = $firebaseArray(userInfo);
+        vm.logOut = Auth.logout;
 
-    vm.ghLogin = Auth.ghLogin;
-
-
-    Auth.onAuth(function (user) {
-        self.user = user;
-        if (user === null) {
-            console.log('null')
-        } else {
-            console.log(user)
-        }
-    });
+        vm.userArray = {};
 
 
+
+        vm.ghLogin = Auth.ghLogin;
+
+
+        Auth.onAuth(function (user) {
+            self.user = user;
+            if (user === null) {
+                console.log('null')
+            } else {
+                console.log(user)
+            }
+        });
+
+    };
 });

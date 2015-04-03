@@ -1,5 +1,5 @@
 <div ng-include="'../components/navbar.html'"></div>
-<div ng-controller="LocationsController" id="slides_control">
+<div id="slides_control">
     <h2 id="locations-title" class="text-center jumbotron">Locations</h2>
 
     <div class="jumbotron shops1 col-md-5">
@@ -14,6 +14,7 @@
             </carousel>
         </div>
         <figcaption>DVDs, coffee, tea & booze meet sandwiches & other light fare at this hip vegan-friendly cafe.</figcaption>
+        <button class="btn btn-primary" ng-click="open('lg')">More Info</button>
     </div>
 
     <div class="jumbotron shops2 col-md-5">

@@ -32,9 +32,7 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
                 creds(updateUser(data));
             });
         },
-        /**
-         * Wrapper for `authWithOAuthPopup()` for each login option.
-         */
+
 
 
         ghLogin: function () {
@@ -66,13 +64,8 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
             }
         }
     }; // end of return block
-    /**
-     *Get the current user.
-     */
-    //     getUser: function() {
-    //         return currentUser;
-    //     }
-    // };
+
+
 
     function updateUser(authdUser) {
         console.log(authdUser)
