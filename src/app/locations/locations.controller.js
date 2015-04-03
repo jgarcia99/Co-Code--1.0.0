@@ -37,6 +37,38 @@ angular.module('coCode')
         }
     ];
 
+    $scope.slides3 = [
+        {
+            image: 'http://honestcooking.com/wp-content/uploads/2013/10/IMG_1146b.jpg'
+        },
+        {
+            image: 'http://rooteddeepbook.com/wp-content/uploads/2013/10/downtown_credo-4-e1300742742565.jpg'
+        },
+        {
+            image: 'http://mealsandmiles.com/wp-content/uploads/2011/10/IMG_0142.jpg'
+        },
+        {
+            image: 'http://amplifiedculture.com/wp-content/uploads/2011/02/downtown_credo-6.jpg'
+        }
+    ];
+
+    $scope.slides4 = [
+        {
+            image: 'http://mealsandmiles.com/wp-content/uploads/2011/03/IMG_5009.jpg'
+        },
+        {
+            image: 'http://www.orlandosentinel.com/media/photo/2009-07/48352153.jpg'
+        },
+        {
+            image: 'http://vp.cdn.cityvoterinc.com/g/00-00-00-49-10-21-491021_388557.jpg'
+        },
+        {
+            image: 'http://www.orlandoweekly.com/binary/0431/1472263.jpg'
+        }
+    ];
+
+
+
     vm.obj = $firebaseArray(userInfo);
     vm.logOut = Auth.logout;
 
