@@ -6,6 +6,17 @@
     font-family: 'Montserrat', serif;
 }
 
+@mixin shops {
+    h3 {
+        @include font;
+        color: #142F54;
+    }
+    figcaption {
+        @include font2;
+        color: #142F54;
+    }
+}
+
 $main: #3F71A6;
 $icon: #804915;
 body {
@@ -43,6 +54,7 @@ body {
     background-color: #eee;
     opacity: .8;
     color: $main;
+    border-radius: 5px;
     .navbar-text {
         color: $main;
         font-size: 1.5em;
@@ -54,18 +66,28 @@ body {
     }
 }
 
-.shops {
-    background-color: #eee;
-    opacity: .9;
-    h2 {
-        @include font;
-        color: $main;
-    }
-    figcaption {
-        @include font2;
-        color: $main;
-    }
+.shops1,
+.shops2,
+.shops3,
+.shops4,
+.shops5 {
+    @include shops;
+    background-color: #758AA8;
 }
+
+#locations-title {
+    @include font;
+    color: #142F54;
+    opacity: .9;
+    background-color: #758AA8;
+}
+
+.outer-color {
+    background-color: #142F54;
+    border-radius: 10px;
+}
+
+.shops1 {}
 
 // injector
 // endinjector

@@ -1,14 +1,77 @@
 <div ng-include="'../components/navbar.html'"></div>
+<div class="col-6-sm col-md-12" ng-controller="LocationsController" id="slides_control">
+    <h2 id="locations-title" class="text-center jumbotron">Locations</h2>
+    <div class="outer-color">
+        <div class="jumbotron shops1">
+            <h3>Stardust</h3>
+            <div>
+                <div>
+                    <carousel>
+                        <slide ng-repeat="slide in slides" active="slide.active">
+                            <img ng-src="{{slide.image}}" height="800" width="800">
 
-
-<div class="jumbotron shops">
-    <h2>Stardust Video & Coffee</h2>
-    <div class="stardust">
-        <figure>
-            <img src="https://orlando-life.com/sites/default/files/Stardust_20120402_0009.jpg">
-            <figcaption>DVDs, coffee, tea & booze meet sandwiches & other light fare at this hip vegan-friendly cafe.
-            </figcaption>
-        </figure>
-
+                        </slide>
+                    </carousel>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="jumbotron shops2">
+        <h3>Austin's Coffee</h3>
+        <div class="austins">
+            <figure>
+                <img src="http://amplifiedculture.com/wp-content/uploads/2011/02/Austins_Coffee-1-e1301102123170.jpg" height="400" width="400">
+                <figcaption>Bohemian cafe with coffee roasted on-site, light bites, beer, wine & live entertainment nightly.
+
+                </figcaption>
+            </figure>
+
+        </div>
+    </div>
+
+    <div class="jumbotron shops3">
+        <h3>Downtown Credo</h3>
+        <div class="austins">
+            <figure>
+                <img src="http://amplifiedculture.com/wp-content/uploads/2011/02/Austins_Coffee-1-e1301102123170.jpg" height="400" width="400">
+                <figcaption>Bohemian cafe with coffee roasted on-site, light bites, beer, wine & live entertainment nightly.
+
+                </figcaption>
+            </figure>
+
+        </div>
+    </div>
+
+    <div class="jumbotron shops4">
+        <h3>Drunken Monkey</h3>
+        <div class="austins">
+            <figure>
+                <carousel>
+                    <slide>
+                        <img src="http://amplifiedculture.com/wp-content/uploads/2011/02/Austins_Coffee-1-e1301102123170.jpg" height="400" width="400">
+
+                    </slide>
+                </carousel>
+
+                <figcaption>Bohemian cafe with coffee roasted on-site, light bites, beer, wine & live entertainment nightly.
+
+                </figcaption>
+            </figure>
+
+        </div>
+    </div>
+
+    <div class="jumbotron shops5">
+        <h3>Vespyr Coffee</h3>
+        <div class="austins">
+            <figure>
+                <img src="http://amplifiedculture.com/wp-content/uploads/2011/02/Austins_Coffee-1-e1301102123170.jpg" height="400" width="400">
+                <figcaption>Bohemian cafe with coffee roasted on-site, light bites, beer, wine & live entertainment nightly.
+
+                </figcaption>
+            </figure>
+
+        </div>
+    </div>
+</div>
 </div>
