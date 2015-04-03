@@ -42,7 +42,7 @@
     </div>
     <figcaption>Donations-only nonprofit coffee shop with an unpretentious space, live music & charitable events.</figcaption>
 </div>
-</div>
+
 
 <div class="jumbotron shops4 col-md-5">
     <h3>Drunken Monkey</h3>
@@ -58,15 +58,14 @@
 </div>
 
 <div class="jumbotron shops5 col-md-5">
-    <h3>Vespyr Coffee</h3>
-    <div class="austins">
-        <figure>
-            <img src="http://amplifiedculture.com/wp-content/uploads/2011/02/Austins_Coffee-1-e1301102123170.jpg" height="400" width="400">
-            <figcaption>Bohemian cafe with coffee roasted on-site, light bites, beer, wine & live entertainment nightly.
+    <h3>Vespyr Craft Coffee & Allures</h3>
+    <div>
+        <carousel>
+            <slide ng-repeat="slide in slides5" active="slide.active">
+                <img ng-src="{{slide.image}}" height="800" width="800">
 
-            </figcaption>
-        </figure>
-
+            </slide>
+        </carousel>
     </div>
-</div>
+    <figcaption>Contemporary coffeehouse serving single-origin coffees & organic, fair-trade teas.</figcaption>
 </div>
