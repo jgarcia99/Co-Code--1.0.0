@@ -17,6 +17,15 @@
     }
 }
 
+@mixin title {
+    @include font2;
+    color: #eee;
+    opacity: .9;
+    background-color: #758AA8;
+    z-index: 200;
+    position: relative;
+}
+
 $main: #3F71A6;
 $icon: #804915;
 body {
@@ -109,7 +118,11 @@ body {
     position: relative;
     z-index: 100;
 }
+/***** posts *****/
 
+#posts-title {
+    @include title;
+}
 
 // injector
 // endinjector

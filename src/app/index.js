@@ -15,6 +15,13 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
             templateUrl: 'app/locations/locations.html',
             controller: 'LocationsController',
             controllerAs: 'vm',
+        })
+
+        .state('posts', {
+            url: '/posts',
+            templateUrl: 'app/posts/posts.html',
+            controller: 'PostsController',
+            controllerAs: 'vm',
         });
 
         $urlRouterProvider.otherwise('/');
