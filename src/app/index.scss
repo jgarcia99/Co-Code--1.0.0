@@ -124,5 +124,17 @@ body {
     @include title;
 }
 
+.options {
+    @include title;
+    background-color: #eee;
+    h3 {
+        color: $main;
+    }
+    span {
+        color: $main;
+        padding: 1em;
+    }
+}
+
 // injector
 // endinjector
