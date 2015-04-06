@@ -1,14 +1,35 @@
 <nav class="navbar navbar-default">
 
-
-
-    <div class="border-left">
-        <img class="pull-left" src="../assets/images/co-code-logo_720.png" height="40" width="40">
-        <span id="navcode">Co-Code</span>
-        <span class="fa fa-bars fa-3x pull-right"></span>
+    <div class="hidden-xs hidden-sm pull-right nav-texts">
+        <a href="">
+            <p class="navbar-text">Home</p>
+            <p class="navbar-text">Profile</p>
+            <p class="navbar-text">Locations</p>
+            <p class="navbar-text">Posts</p>
+        </a>
     </div>
 
 
+    <img class="navbar-brand" src="../assets/images/co-code-logo_720.png" alt="Brand">
+    <span id="navcode" class="navbar-text">Co-Code</span>
+
+
+    <div id="nav-fix" class="pull-right btn-group hidden-md hidden-lg" dropdown is-open="status.isopen">
+        <button type="button" class="dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+            <span class=" fa fa-bars fa-2x"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Home</a>
+            </li>
+            <li><a href="#">Posts</a>
+            </li>
+            <li><a href="#">Locations</a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="#">Profile</a>
+            </li>
+        </ul>
+    </div>
 
 
 </nav>

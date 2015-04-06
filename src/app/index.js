@@ -42,7 +42,7 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
                 if (error) {
                     console.log("Login Failed!", error);
                 } else {
-                    $state.go('choose');
+
                     console.log("Authenticated successfully with payload:", authData);
                 }
             }, {

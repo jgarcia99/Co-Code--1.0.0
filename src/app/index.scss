@@ -76,12 +76,13 @@ body {
     color: #eee;
     opacity: .9;
     background-color: #758AA8;
+    z-index: 200;
+    position: relative;
 }
 
 #navcode {
     @include font;
-    padding-left: 3em;
-    padding-top: 2em;
+    color: $main;
 }
 
 .modal-header {
@@ -103,6 +104,12 @@ body {
 .modal-span2 {
     color: $main;
 }
+
+#nav-fix {
+    position: relative;
+    z-index: 100;
+}
+
 
 // injector
 // endinjector
