@@ -82,7 +82,7 @@ angular.module('coCode')
         }
     ];
 
-    $scope.open = function (size) {
+    $scope.star = function (size) {
 
         var modalInstance = $modal.open({
             templateUrl: '/app/modals/stardust.modal.html',
@@ -112,7 +112,7 @@ angular.module('coCode')
 
     };
 
-    $scope.open = function (size) {
+    $scope.austin = function (size) {
 
         var modalInstance = $modal.open({
             templateUrl: '/app/modals/austins.modal.html',
@@ -120,6 +120,45 @@ angular.module('coCode')
             size: size,
 
         });
+        console.log('austin');
+    };
+
+    $scope.credo = function (size) {
+
+        var modalInstance = $modal.open({
+            templateUrl: '/app/modals/credo.modal.html',
+            controller: 'CredoModalController',
+            size: size,
+
+        });
 
     };
+
+    $scope.monkey = function (size) {
+
+        var modalInstance = $modal.open({
+            templateUrl: '/app/modals/monkey.modal.html',
+            controller: 'MonkeyModalController',
+            size: size,
+
+        });
+
+    };
+    $scope.vespr = function (size) {
+
+        var modalInstance = $modal.open({
+            templateUrl: '/app/modals/vespyr.modal.html',
+            controller: 'VesprModalController',
+            size: size,
+
+        });
+
+    };
+
+
+
+
+
+
+
 });
