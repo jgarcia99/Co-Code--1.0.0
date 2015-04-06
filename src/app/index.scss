@@ -6,6 +6,26 @@
     font-family: 'Montserrat', serif;
 }
 
+@mixin shops {
+    h3 {
+        @include font2;
+        color: #eee;
+    }
+    figcaption {
+        @include font2;
+        color: #eee;
+    }
+}
+
+@mixin title {
+    @include font2;
+    color: #eee;
+    opacity: .9;
+    background-color: #758AA8;
+    z-index: 200;
+    position: relative;
+}
+
 $main: #3F71A6;
 $icon: #804915;
 body {
@@ -13,6 +33,7 @@ body {
     background-size: cover;
     background-size: cover;
 }
+/**** login layout *****/
 
 .login {
     opacity: .8;
@@ -38,33 +59,69 @@ body {
 .github {
     padding: 42%;
 }
+/****** nav bar ******/
 
 .navbar {
     background-color: #eee;
     opacity: .8;
     color: $main;
-    .navbar-text {
-        color: $main;
-        font-size: 1.5em;
-        padding: 1em;
-        @include font;
-    }
-    img {
-        color: $main;
+    border-radius: 5px;
+    font-size: 1em;
+}
+/***** locations *****/
+
+.shops1,
+.shops2,
+.shops3,
+.shops4,
+.shops5 {
+    @include shops;
+    background-color: #758AA8;
+    margin: 3em;
+}
+
+#locations-title {
+    @include font2;
+    color: #eee;
+    opacity: .9;
+    background-color: #758AA8;
+    z-index: 200;
+    position: relative;
+}
+
+#navcode {
+    @include font;
+    color: $main;
+}
+
+.modal-header {
+    background-color: $main;
+    @include font;
+}
+
+.modal-body {
+    p {
+        @include font2;
     }
 }
 
-.shops {
-    background-color: #eee;
-    opacity: .9;
-    h2 {
-        @include font;
-        color: $main;
-    }
-    figcaption {
-        @include font2;
-        color: $main;
-    }
+.modal-span {
+    padding-left: 3.7em;
+    color: $main;
+}
+
+.modal-span2 {
+    color: $main;
+}
+
+#nav-fix {
+    position: relative;
+    z-index: 100;
+}
+/***** posts *****/
+
+#posts-title {
+    @include title;
 }
 
 // injector

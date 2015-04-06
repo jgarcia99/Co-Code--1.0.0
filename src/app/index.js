@@ -15,6 +15,13 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
             templateUrl: 'app/locations/locations.html',
             controller: 'LocationsController',
             controllerAs: 'vm',
+        })
+
+        .state('posts', {
+            url: '/posts',
+            templateUrl: 'app/posts/posts.html',
+            controller: 'PostsController',
+            controllerAs: 'vm',
         });
 
         $urlRouterProvider.otherwise('/');
@@ -32,9 +39,7 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
                 creds(updateUser(data));
             });
         },
-        /**
-         * Wrapper for `authWithOAuthPopup()` for each login option.
-         */
+
 
 
         ghLogin: function () {
@@ -44,7 +49,7 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
                 if (error) {
                     console.log("Login Failed!", error);
                 } else {
-                    $state.go('choose');
+
                     console.log("Authenticated successfully with payload:", authData);
                 }
             }, {
@@ -66,13 +71,8 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
             }
         }
     }; // end of return block
-    /**
-     *Get the current user.
-     */
-    //     getUser: function() {
-    //         return currentUser;
-    //     }
-    // };
+
+
 
     function updateUser(authdUser) {
         console.log(authdUser)

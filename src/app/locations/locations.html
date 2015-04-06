@@ -1,14 +1,75 @@
 <div ng-include="'../components/navbar.html'"></div>
+<h2 id="locations-title" class="text-center jumbotron">Locations</h2>
 
+<div class="jumbotron shops1 col-md-5">
+    <h3>Stardust Video & Coffee</h3>
 
-<div class="jumbotron shops">
-    <h2>Stardust Video & Coffee</h2>
-    <div class="stardust">
-        <figure>
-            <img src="https://orlando-life.com/sites/default/files/Stardust_20120402_0009.jpg">
-            <figcaption>DVDs, coffee, tea & booze meet sandwiches & other light fare at this hip vegan-friendly cafe.
-            </figcaption>
-        </figure>
+    <div>
+        <carousel>
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}" height="800" width="800">
 
+            </slide>
+        </carousel>
     </div>
+    <figcaption>DVDs, coffee, tea & booze meet sandwiches & other light fare at this hip vegan-friendly cafe.</figcaption>
+    <button class="btn btn-primary" ng-click="star('sm')">More Info</button>
+</div>
+
+<div class="jumbotron shops2 col-md-5">
+    <h3>Austin's Coffee</h3>
+    <div>
+        <carousel>
+            <slide ng-repeat="slide in slides2" active="slide.active">
+                <img ng-src="{{slide.image}}" height="800" width="800">
+
+            </slide>
+        </carousel>
+    </div>
+    <figcaption>Bohemian cafe with coffee roasted on-site, light bites, beer, wine & live entertainment nightly.</figcaption>
+    <button class="btn btn-primary" ng-click="austin('sm')">More Info</button>
+</div>
+
+
+<div class="jumbotron shops3 col-md-5">
+    <h3>Downtown Credo</h3>
+    <div>
+        <carousel>
+            <slide ng-repeat="slide in slides3" active="slide.active">
+                <img ng-src="{{slide.image}}" height="800" width="800">
+
+            </slide>
+        </carousel>
+    </div>
+    <figcaption>Donations-only nonprofit coffee shop with an unpretentious space, live music & charitable events.</figcaption>
+    <button class="btn btn-primary" ng-click="credo('sm')">More Info</button>
+</div>
+
+
+<div class="jumbotron shops4 col-md-5">
+    <h3>Drunken Monkey</h3>
+    <div>
+        <carousel>
+            <slide ng-repeat="slide in slides4" active="slide.active">
+                <img ng-src="{{slide.image}}" height="800" width="800">
+
+            </slide>
+        </carousel>
+    </div>
+    <figcaption>House-roasted coffee & veggie-friendly sandwiches & snacks in a low-key, bohemian setting.</figcaption>
+    <button class="btn btn-primary" ng-click="monkey('sm')">More Info</button>
+</div>
+
+<div class="jumbotron shops5 col-md-5">
+    <h3>Vespr Craft Coffee & Allures</h3>
+    <div>
+        <carousel>
+            <slide ng-repeat="slide in slides5" active="slide.active">
+                <img ng-src="{{slide.image}}" height="800" width="800">
+
+            </slide>
+        </carousel>
+    </div>
+    <figcaption>Contemporary coffeehouse serving single-origin coffees & organic, fair-trade teas.</figcaption>
+    <button class="btn btn-primary" ng-click="vespr('sm')">More Info</button>
 </div>
