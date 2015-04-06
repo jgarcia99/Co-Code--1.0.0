@@ -1,9 +1,7 @@
-<div ng-include="'../components/navbar.html'"></div>
-
-<h2 id="posts-title" class="text-center jumbotron">Posts</h2>
-
-<div class="jumbotron options">
-    <h3>Search:</h3>
+<div class="modal-header">
+    <h3 class="modal-title">New Posts</h3>
+</div>
+<div class="modal-body">
     <div>
         <span>Tech:</span>
         <select name="" id="">
@@ -25,8 +23,6 @@
         </select>
     </div>
 
-
-
     <div>
         <span>Reason:</span>
         <select name="" id="">
@@ -35,19 +31,19 @@
         </select>
     </div>
 
+    <div>
+        <span>Check-in:</span>
+        <timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
 
-
-
-
-
-
-
-    <button type="button" class="btn btn-success">Search</button>
-    <button class="btn btn-primary" ng-click="posts('lg')">New Post</button>
-
-
-    <div class="container border-posts">
-        <p>hey</p>
     </div>
-    <!--options end-->
+
+    <div>
+        <span>Check-out:</span>
+        <timepicker ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="submit()">Submit</button>
+
 </div>

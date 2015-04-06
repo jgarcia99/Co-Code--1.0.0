@@ -134,6 +134,15 @@ body {
         color: $main;
         padding: 1em;
     }
+    section {
+        color: $main;
+    }
+}
+
+.border-posts {
+    border: 3px solid $main;
+    height: 300px;
+    width: 300px
 }
 
 // injector
