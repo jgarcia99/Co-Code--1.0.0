@@ -1,0 +1,22 @@
+<div ng-include="'../components/navbar.html'"></div>
+<div class="container main-profile jumbotron">
+    <h2 class="text-center">Profile</h2>
+    <div class="user-photo col-md-6">
+        <img ng-src="{{user.photo}}">
+    </div>
+
+    <div class="user-info col-md-6">
+        <p>Username: {{user.handle}}</p>
+        <p>Name: {{user.name}}</p>
+        <p>Followers: {{user.followers}}</p>
+        <p>Following: {{user.following}}</p>
+        <p>location: {{user.location}}</p>
+        <p>Company: {{user.company}}</p>
+        <p>URL: <a href="{{user.url}}">{{user.url}}</a>
+        </p>
+        <p>Email: {{user.email}}</p>
+    </div>
+
+
+
+</div>

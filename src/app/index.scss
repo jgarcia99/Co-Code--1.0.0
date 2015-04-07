@@ -137,12 +137,28 @@ body {
     section {
         color: $main;
     }
+    button {
+        margin: 2em;
+    }
 }
 
 .border-posts {
     border: 3px solid $main;
-    height: 300px;
-    width: 300px
+    color: $main;
+}
+/***** profile *****/
+
+.main-profile {
+    @include title;
+    img {
+        height: 300px;
+        width: 300px;
+        border-radius: 10px;
+        opacity: 1;
+    }
+    h2 {
+        color: $main;
+    }
 }
 
 // injector

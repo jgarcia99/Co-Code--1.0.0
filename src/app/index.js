@@ -22,6 +22,12 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
             templateUrl: 'app/posts/posts.html',
             controller: 'PostsController',
             controllerAs: 'vm',
+        })
+
+        .state('profile', {
+            url: '/profile',
+            templateUrl: 'app/profile/profile.html',
+            controller: 'ProfileController'
         });
 
         $urlRouterProvider.otherwise('/');
@@ -49,7 +55,7 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
                 if (error) {
                     console.log("Login Failed!", error);
                 } else {
-
+                    $state.go('posts');
                     console.log("Authenticated successfully with payload:", authData);
                 }
             }, {
@@ -60,7 +66,8 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
          */
         logout: function () {
             auth.unauth();
-            console.log("hello")
+            $state.go('login')
+            console.log("loggedout")
         },
         /** Wrapper to allow the main controller to check if a user is currently
          * Logged in currently

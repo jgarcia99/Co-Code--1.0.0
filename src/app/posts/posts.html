@@ -42,12 +42,20 @@
 
 
 
+
     <button type="button" class="btn btn-success">Search</button>
     <button class="btn btn-primary" ng-click="posts('lg')">New Post</button>
 
 
-    <div class="container border-posts">
-        <p>hey</p>
+    <div class="container border-posts" ng-repeat="post in posts">
+        <p>{{name}} </p>
+        <p>{{location}}</p>
+        <p>{{tech}}</p>
+        <p>{{reason}}</p>
+        <p>{{timein}}</p>
+        <p>{{timeout}}</p>
+
+
     </div>
     <!--options end-->
 </div>

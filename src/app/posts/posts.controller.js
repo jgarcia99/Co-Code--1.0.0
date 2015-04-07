@@ -11,6 +11,8 @@ angular.module('coCode')
 
     vm.userArray = {};
 
+    $scope.posts = [];
+
     $scope.posts = function (size) {
 
         var modalInstance = $modal.open({
@@ -18,8 +20,38 @@ angular.module('coCode')
             controller: 'PostsModalController',
             size: size,
 
+
+
         });
-        console.log('austin');
+        modalInstance.result.then(function (userInfo) {
+
+            $scope.obj = $firebaseArray(userInfo);
+            console.log($scope.obj)
+
+            $scope.userInfo = {};
+
+            $scope.userInfo = {
+                reason: " ",
+                tech: " ",
+                location: "",
+                checkin: "",
+                checkout: ""
+            };
+
+            $scope.addUserInfo = function () {
+                userInfo.update({
+                    reason: $scope.reason,
+                    tech: $scope.tech,
+                    location: $scope.location,
+                    checkin: $scope.checkin,
+                    checkout: $scope.checkout
+
+                })
+
+            };
+
+
+        });
     };
 
     vm.ghLogin = Auth.ghLogin;
