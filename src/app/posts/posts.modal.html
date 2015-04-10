@@ -1,12 +1,10 @@
-<div ng-include="'../components/navbar.html'"></div>
-
-<h2 id="posts-title" class="text-center jumbotron">Posts</h2>
-
-<div class="jumbotron options">
-    <h3>Search:</h3>
+<div class="modal-header">
+    <h3 class="modal-title">New Posts</h3>
+</div>
+<div class="modal-body">
     <div>
         <span>Tech:</span>
-        <select name="" id="">
+        <select ng-model="user.info" name="" id="">
             <option value="Front-End">Front-End</option>
             <option value="Back-End">Back-End</option>
             <option value="Mobile">Mobile</option>
@@ -16,7 +14,7 @@
 
     <div>
         <span>Location:</span>
-        <select name="" id="">
+        <select ng-model="user.info" id="">
             <option value="Stardust Video & Coffee">Stardust Video & Coffee</option>
             <option value="Austin's Coffee">Austin's Coffee</option>
             <option value="Drunken Monkey Coffee Bar">Drunken Monkey Coffee Bar</option>
@@ -25,38 +23,27 @@
         </select>
     </div>
 
-
-
     <div>
         <span>Reason:</span>
-        <select name="" id="">
+        <select ng-model="user.info" name="" id="">
             <option value="Conversation">Conversation</option>
             <option value="Code">Code</option>
         </select>
     </div>
 
-
-
-
-
-
-
-
-
-    <button type="button" class="btn btn-success">Search</button>
-    <button class="btn btn-primary" ng-click="post('lg')">New Post</button>
-    Posts: {{ posts | json }}
-
-
-    <div class="container border-posts" ng-model="user.info" ng-repeat="post in posts">
-        <p>{{user.handle}} </p>
-        <p>{{info}}</p>
-        <p>{{tech}}</p>
-        <p>{{reason}}</p>
-        <p>{{timein}}</p>
-        <p>{{timeout}}</p>
-
+    <div>
+        <span ng-model="user.timein">Check-in:</span>
+        <timepicker ng-model="checkin" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
 
     </div>
-    <!--options end-->
+
+    <div>
+        <span ng-model="user.timeout">Check-out:</span>
+        <timepicker ng-model="checkout" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="submit(data)">Submit</button>
+
 </div>

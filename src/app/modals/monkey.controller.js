@@ -1,34 +1,38 @@
-'use strict'
+(function () {
 
-angular.module('coCode')
+    'use strict';
 
-.controller('MonkeyModalController', function ($state, $firebaseObject, $firebaseArray, $stateParams, Auth, $modal, $scope, $log, $modalInstance) {
-    var vm = this;
-    var userInfo = new Firebase('https://co-code.firebaseio.com/users');
+    angular.module('coCode')
 
-
-    $scope.ok = function () {
-        $modalInstance.close($scope);
-    };
-
-    vm.obj = $firebaseArray(userInfo);
-    vm.logOut = Auth.logout;
-
-    vm.userArray = {};
+    .controller('MonkeyModalController', function ($state, $firebaseObject, $firebaseArray, $stateParams, Auth, $modal, $scope, $log, $modalInstance) {
+        var vm = this;
+        var userInfo = new Firebase('https://co-code.firebaseio.com/users');
 
 
+        $scope.ok = function () {
+            $modalInstance.close($scope);
+        };
 
-    vm.ghLogin = Auth.ghLogin;
+        vm.obj = $firebaseArray(userInfo);
+        vm.logOut = Auth.logout;
+
+        vm.userArray = {};
 
 
-    Auth.onAuth(function (user) {
-        self.user = user;
-        if (user === null) {
-            console.log('null')
-        } else {
-            console.log(user)
-        }
+
+        vm.ghLogin = Auth.ghLogin;
+
+
+        Auth.onAuth(function (user) {
+            self.user = user;
+            if (user === null) {
+                console.log('null')
+            } else {
+                console.log(user)
+            }
+        });
+
+
     });
 
-
-});
+})();

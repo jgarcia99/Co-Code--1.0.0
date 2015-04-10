@@ -67,6 +67,7 @@ body {
     color: $main;
     border-radius: 5px;
     font-size: 1em;
+    width: 100% !important;
 }
 /***** locations *****/
 
@@ -122,6 +123,43 @@ body {
 
 #posts-title {
     @include title;
+}
+
+.options {
+    @include title;
+    background-color: #eee;
+    h3 {
+        color: $main;
+    }
+    span {
+        color: $main;
+        padding: 1em;
+    }
+    section {
+        color: $main;
+    }
+    button {
+        margin: 2em;
+    }
+}
+
+.border-posts {
+    border: 3px solid $main;
+    color: $main;
+}
+/***** profile *****/
+
+.main-profile {
+    @include title;
+    img {
+        height: 300px;
+        width: 300px;
+        border-radius: 10px;
+        opacity: 1;
+    }
+    h2 {
+        color: $main;
+    }
 }
 
 // injector

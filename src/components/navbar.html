@@ -1,12 +1,23 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-static-top">
 
     <div class="hidden-xs hidden-sm pull-right nav-texts">
-        <a href="">
-            <p class="navbar-text">Home</p>
-            <p class="navbar-text">Profile</p>
-            <p class="navbar-text">Locations</p>
+
+        <a ui-sref="posts">
             <p class="navbar-text">Posts</p>
         </a>
+        <a ui-sref="profile">
+            <p class="navbar-text">Profile</p>
+        </a>
+
+        <a ui-sref="locations">
+            <p class="navbar-text">Locations</p>
+        </a>
+
+        <a ng-click="vm.logOut()">
+            <p class="navbar-text">Logout <img ng-src="{{user.photo}}" height="20" width="20"> </p>
+        </a>
+
+
     </div>
 
 
@@ -19,14 +30,14 @@
             <span class=" fa fa-bars fa-2x"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Home</a>
+            <li><a ui-sref="posts">Posts</a>
             </li>
-            <li><a href="#">Posts</a>
+            <li><a ui-sref="locations">Locations</a>
             </li>
-            <li><a href="#">Locations</a>
+            <li><a ui-sref="profile">Profile</a>
             </li>
             <li class="divider"></li>
-            <li><a href="#">Profile</a>
+            <li><a ng-click="vm.logOut()">Logout <img ng-src="{{user.photo}}" height="20" width="20"></a>
             </li>
         </ul>
     </div>
