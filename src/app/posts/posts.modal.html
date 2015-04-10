@@ -4,7 +4,7 @@
 <div class="modal-body">
     <div>
         <span>Tech:</span>
-        <select ng-model="user.tech" name="" id="">
+        <select ng-model="user.info" name="" id="">
             <option value="Front-End">Front-End</option>
             <option value="Back-End">Back-End</option>
             <option value="Mobile">Mobile</option>
@@ -14,7 +14,7 @@
 
     <div>
         <span>Location:</span>
-        <select ng-model="user.location" id="">
+        <select ng-model="user.info" id="">
             <option value="Stardust Video & Coffee">Stardust Video & Coffee</option>
             <option value="Austin's Coffee">Austin's Coffee</option>
             <option value="Drunken Monkey Coffee Bar">Drunken Monkey Coffee Bar</option>
@@ -25,7 +25,7 @@
 
     <div>
         <span>Reason:</span>
-        <select ng-model="user.reason" name="" id="">
+        <select ng-model="user.info" name="" id="">
             <option value="Conversation">Conversation</option>
             <option value="Code">Code</option>
         </select>
@@ -44,6 +44,6 @@
 
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="submit(userInfo)">Submit</button>
+    <button class="btn btn-primary" ng-click="submit(data)">Submit</button>
 
 </div>

@@ -2,9 +2,11 @@
 
 angular.module('coCode')
 
-.controller('PostsModalController', function ($state, $firebaseObject, $firebaseArray, $stateParams, Auth, $modal, $scope, $log, $modalInstance) {
+.controller('PostsModalController', function ($state, $firebaseObject, $firebaseArray, $stateParams, Auth, $modal, $scope, $log, $modalInstance, data) {
     var vm = this;
     var userInfo = new Firebase('https://co-code.firebaseio.com/users');
+
+    console.log('data', data);
     $scope.checkin = new Date();
 
     $scope.hstep = 1;
@@ -49,17 +51,17 @@ angular.module('coCode')
         $scope.mytime = d;
     };
 
-    $scope.submit = function (userInfo) {
-        $modalInstance.close($scope);
-        return {
-            tech: $scope.tech,
-            location: $scope.location,
-            reason: $scope.reason,
-            checkin: $scope.checkin,
-            checkout: $scope.checkout
-        };
-
+    $scope.submit = function () {
+        $modalInstance.close(newPost);
     };
+
+    $scope.newPost = {
+        tech: '',
+        location: '',
+        reason: '',
+        checkin: '',
+        checkout: '',
+    }
 
     vm.obj = $firebaseArray(userInfo);
     vm.logOut = Auth.logout;

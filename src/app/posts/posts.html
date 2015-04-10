@@ -44,12 +44,13 @@
 
 
     <button type="button" class="btn btn-success">Search</button>
-    <button class="btn btn-primary" ng-click="posts('lg')">New Post</button>
+    <button class="btn btn-primary" ng-click="post('lg')">New Post</button>
+    Posts: {{ posts | json }}
 
 
-    <div class="container border-posts" ng-repeat="post in posts">
-        <p>{{name}} </p>
-        <p>{{location}}</p>
+    <div class="container border-posts" ng-model="user.info" ng-repeat="post in posts">
+        <p>{{user.handle}} </p>
+        <p>{{info}}</p>
         <p>{{tech}}</p>
         <p>{{reason}}</p>
         <p>{{timein}}</p>

@@ -1,13 +1,23 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-static-top">
 
     <div class="hidden-xs hidden-sm pull-right nav-texts">
-        <a href="">
-            <p class="navbar-text" ui-sref="posts">Posts</p>
-            <p class="navbar-text" ui-sref="profile">Profile</p>
-            <p class="navbar-text" ui-sref="locations">Locations</p>
-            <p class="navbar-text" ng-click="vm.logOut()">Logout <img ng-src="{{user.photo}}" height="20" width="20">
-            </p>
+
+        <a ui-sref="posts">
+            <p class="navbar-text">Posts</p>
         </a>
+        <a ui-sref="profile">
+            <p class="navbar-text">Profile</p>
+        </a>
+
+        <a ui-sref="locations">
+            <p class="navbar-text">Locations</p>
+        </a>
+
+        <a ng-click="vm.logOut()">
+            <p class="navbar-text">Logout <img ng-src="{{user.photo}}" height="20" width="20"> </p>
+        </a>
+
+
     </div>
 
 
@@ -27,7 +37,7 @@
             <li><a ui-sref="profile">Profile</a>
             </li>
             <li class="divider"></li>
-            <li><a ng-click="vm.logOut()">Logout</a>
+            <li><a ng-click="vm.logOut()">Logout <img ng-src="{{user.photo}}" height="20" width="20"></a>
             </li>
         </ul>
     </div>

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router', 'ui.bootstrap', 'firebase'])
+angular.module('coCode', ['ngCookies', 'ngTouch', 'ngSanitize', 'restangular', 'ui.router', 'ui.bootstrap', 'firebase', ])
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('login', {
@@ -28,6 +28,13 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
             url: '/profile',
             templateUrl: 'app/profile/profile.html',
             controller: 'ProfileController'
+        })
+
+        .state('tweets', {
+            url: '/tweets',
+            templateUrl: 'app/twitter/twitter.html',
+            controller: 'TwitterController',
+            controllerAs: 'vm'
         });
 
         $urlRouterProvider.otherwise('/');
@@ -46,7 +53,19 @@ angular.module('coCode', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 're
             });
         },
 
+        twitLogin: function () {
 
+            return auth.authWithOAuthPopup("twitter", function (error, authData) {
+                console.log(authData)
+                if (error) {
+                    console.log("Login Failed!", error);
+                } else {
+                    console.log("Authenticated successfully with payload:", authData);
+                }
+            }, {
+                remember: "sessionOnly"
+            })
+        },
 
         ghLogin: function () {
 

@@ -11,18 +11,29 @@ angular.module('coCode')
 
     vm.userArray = {};
 
-    $scope.posts = [];
+    $scope.posts = {};
 
-    $scope.posts = function (size) {
+    $scope.post = function (size) {
 
         var modalInstance = $modal.open({
             templateUrl: '/app/posts/posts.modal.html',
             controller: 'PostsModalController',
             size: size,
+            resolve: {
+                data: function () {
+                    return {
+                        tech: $scope.tech,
+                        reason: $scope.reason,
+                        location: $scope.location,
+                        checkin: $scope.checkin,
+                        checkout: $scope.checkout
+                    };
+                }
+            }
+        })
 
 
 
-        });
         modalInstance.result.then(function (userInfo) {
 
             $scope.obj = $firebaseArray(userInfo);
