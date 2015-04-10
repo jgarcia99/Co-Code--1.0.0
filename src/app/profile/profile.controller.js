@@ -1,3 +1,7 @@
+(function () {
+
+    'use strict';
+
 angular.module('coCode')
     .controller('ProfileController', function ($state, $firebaseObject, $scope, $firebaseArray, $stateParams, Auth) {
         Auth.onAuth(function (user) {
@@ -10,3 +14,5 @@ angular.module('coCode')
             }
         });
     });
+
+})();
