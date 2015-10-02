@@ -31,9 +31,20 @@ $icon: #804915;
 body {
     background: url('../assets/images/tech.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-size: cover;
 }
 /**** login layout *****/
+
+.join {
+  height: 30%;
+  width: 44%;
+  background: #eee;
+  opacity: .8;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 4%;
+  margin: 0 auto;
+}
+
 
 .login {
     opacity: .8;

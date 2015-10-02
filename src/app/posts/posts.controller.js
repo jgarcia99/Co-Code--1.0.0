@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 angular.module('coCode')
 
@@ -18,7 +18,7 @@ angular.module('coCode')
         var modalInstance = $modal.open({
             templateUrl: '/app/posts/posts.modal.html',
             controller: 'PostsModalController',
-            size: size,
+            size: size
 
 
 
@@ -26,7 +26,7 @@ angular.module('coCode')
         modalInstance.result.then(function (userInfo) {
 
             $scope.obj = $firebaseArray(userInfo);
-            console.log($scope.obj)
+            console.log($scope.obj);
 
             $scope.userInfo = {};
 
